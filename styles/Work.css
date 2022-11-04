@@ -1,0 +1,67 @@
+.work {
+  /* height: 100vh; */
+  flex: 1 1;
+  margin: 1.5rem 1.5rem 0rem 320px;
+}
+
+.work--heading {
+  padding: 0 0 2rem 0;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.work__experience {
+  line-height: 30px;
+  /* background-color: #eee; */
+}
+
+.work__container {
+  margin-bottom: 3rem;
+  /* background-color: #ddd; */
+}
+
+.work__company__duration {
+  display: flex;
+  flex-direction: row;
+}
+
+.work__company {
+  font-size: 1.5rem;
+  width: 60%;
+}
+
+.work__duration {
+  width: 40%;
+  text-align: left;
+}
+
+.work__designation {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.project__container {
+  /* background-color: #ccc; */
+  text-align: justify;
+}
+
+.work__points {
+  /* background-color: #bbb; */
+}
+
+.work__subHeading {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 800px) {
+  .work {
+    margin: 3rem 1.5rem 0rem 1.5rem;
+  }
+  .work__duration {
+    width: 40%;
+    text-align: right;
+  }
+  .work__points {
+    padding-inline-start: 20px;
+  }
+}

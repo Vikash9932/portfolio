@@ -1,0 +1,103 @@
+.projects {
+  flex: 1 1;
+  margin: 1.5rem 1.5rem 0rem 320px;
+}
+
+.projects--heading {
+  padding: 0 0 2rem 0;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.projects__list--filterHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.projects__list__filterHeader--item {
+  background-color: aquamarine;
+  padding: 1rem;
+}
+
+.projects__list__filterHeader--item:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.projects__list__filterHeader--item:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.projects__list__filterHeader--item:hover {
+  background-color: rgb(101, 205, 170);
+}
+
+.projects__list--filterHeader1 {
+  display: none;
+}
+
+.projects__list__filterHeader1--item {
+  border: 1px solid black;
+  width: 100px;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: rgb(101, 205, 170);
+}
+
+.projects__list--content {
+  margin-top: 1.7rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.projects__list__content--item {
+  border: 1px solid lightgray;
+  margin: 0 1.5rem 2rem 0;
+  width: 250px;
+  height: 270px;
+  position: relative;
+}
+.projects__list__content__item--image {
+  width: 250px;
+  height: 250px;
+}
+.projects__list__content--item:hover .projects__list__content__item--image {
+  opacity: 0.2;
+}
+.projects__list__content--item:hover .projects__list__content__item--links a {
+  opacity: 1;
+}
+.projects__list__content__item--links a {
+  color: black;
+  position: absolute;
+  top: 40%;
+  opacity: 0;
+}
+.projects__list__content__item__links--git {
+  margin-left: 40%;
+}
+.projects__list__content__item__links--deploy {
+  margin-left: 60%;
+}
+
+.projects__list__content__item--name {
+  text-align: center;
+}
+/* Media Queries */
+@media screen and (max-width: 800px) {
+  .projects {
+    margin: 3rem 1.5rem 0rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .projects__list--filterHeader {
+    display: none;
+  }
+  .projects__list--filterHeader1 {
+    display: block;
+  }
+}

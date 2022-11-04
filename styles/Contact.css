@@ -1,0 +1,70 @@
+.contact {
+  /* height: 100vh; */
+  flex: 1 1;
+  margin: 1.5rem 1.5rem 0rem 320px;
+}
+
+.contact--heading {
+  padding: 0 0 2rem 0;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.contact--summary {
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+}
+
+.contact__details {
+  margin: 2rem auto 1rem auto;
+  width: 40%;
+}
+
+.contact__details__mail,
+.contact__details__call,
+.contact__details__location {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact__details svg {
+  padding: 1rem;
+  background-color: rgb(39, 158, 128);
+  border-radius: 100%;
+  color: white;
+}
+
+.contact__details__mail .contact__details__mail--info {
+  align-self: center;
+  margin-left: 1rem;
+  user-select: all;
+}
+.contact__details__call .contact__details__call--info {
+  align-self: center;
+  margin-left: 1rem;
+  user-select: all;
+}
+.contact__details__location .contact__details__location--info {
+  align-self: center;
+  margin-left: 1rem;
+}
+.contact__details a {
+  color: blue;
+}
+@media screen and (max-width: 800px) {
+  .contact {
+    margin: 3rem 1.5rem 0rem 1.5rem;
+  }
+  .contact__details {
+    margin: 2rem auto 1rem auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact__details {
+    margin: 2rem auto 1rem auto;
+    width: 100%;
+  }
+}

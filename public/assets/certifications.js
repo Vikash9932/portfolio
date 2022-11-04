@@ -1,0 +1,75 @@
+import { SiHackerrank, SiFreecodecamp, SiInfosys } from 'react-icons/si';
+
+const certifications = [
+  {
+    id: 8,
+    name: 'JavaScript Algorithms and Data Structures',
+    by: 'freeCodeCamp',
+    url: 'https://freecodecamp.org/certification/vikash9932/javascript-algorithms-and-data-structures',
+    date: '05/2022',
+    logo: <SiFreecodecamp size={45} />,
+  },
+  {
+    id: 7,
+    name: 'Responsive Web Design',
+    by: 'freeCodeCamp',
+    url: 'https://freecodecamp.org/certification/vikash9932/responsive-web-design',
+    date: '04/2022',
+    logo: <SiFreecodecamp size={45} />,
+  },
+  {
+    id: 6,
+    name: 'JavaScript(Basic)',
+    by: 'HackerRank',
+    logo: <SiHackerrank size={45} />,
+    url: 'https://www.hackerrank.com/certificates/27f19ff070d7',
+    date: '03/2022',
+  },
+  {
+    id: 5,
+    name: 'Infosys Certified Front-End Web Developer - 101',
+    by: 'Infosys Limited',
+    date: '08/2020',
+    duration: '1 Hr',
+    score: '74/100',
+    logo: <SiInfosys size={45} />,
+  },
+  {
+    id: 4,
+    name: 'Infosys Certified React Professional',
+    by: 'Infosys Limited',
+    date: '08/2020',
+    duration: '3 Hrs',
+    score: '81/100',
+    logo: <SiInfosys size={45} />,
+  },
+  {
+    id: 3,
+    name: 'Infosys Certified Mongo Developer',
+    by: 'Infosys Limited',
+    date: '06/2020',
+    duration: '3 Hrs',
+    score: '78/100',
+    logo: <SiInfosys size={45} />,
+  },
+  {
+    id: 2,
+    name: 'Infosys Certified JavaScript Programmer',
+    by: 'Infosys Limited',
+    date: '06/2020',
+    duration: '3 Hrs',
+    score: '79/100',
+    logo: <SiInfosys size={45} />,
+  },
+  {
+    id: 1,
+    name: 'Infosys Certified Python Programmer',
+    by: 'Infosys Limited',
+    date: '04/2019',
+    duration: '3 Hrs',
+    score: '90/100',
+    logo: <SiInfosys size={45} />,
+  },
+];
+
+export default certifications;
