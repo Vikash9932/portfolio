@@ -1,4 +1,5 @@
-import { useContext } from 'react';
+import { useEffect, useContext } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -16,13 +17,13 @@ import ContextFile from './context';
 
 const SideBarContent = () => {
   const { path, setPath, icon, setIcon } = useContext(ContextFile);
-  // const location = useLocation();
-
+  const router = useRouter();
+  // console.log('router', router);
   // console.log('path inside sidebar', path, icon);
-  // useEffect(() => {
-  //   setPath(location.pathname);
-  //   //eslint-disable-next-line
-  // }, [location]);
+  useEffect(() => {
+    setPath(router.pathname);
+    //eslint-disable-next-line
+  }, [router]);
 
   return (
     <div className='sidebar'>
@@ -53,7 +54,7 @@ const SideBarContent = () => {
       <div className='sidebar--nav'>
         <Link
           href='/'
-          // className={path === '/' ? 'selectedRoute' : 'notSelectedRoute'}
+          className={path === '/' ? 'selectedRoute' : 'notSelectedRoute'}
           onClick={() => setIcon(true)}>
           <div>
             <AiOutlineHome size='25' />
@@ -62,7 +63,7 @@ const SideBarContent = () => {
         </Link>
         <Link
           href='/about'
-          // className={path === '/about' ? 'selectedRoute' : 'notSelectedRoute'}
+          className={path === '/about' ? 'selectedRoute' : 'notSelectedRoute'}
           onClick={() => setIcon(true)}>
           <div>
             <CgProfile size='25' />
@@ -72,9 +73,9 @@ const SideBarContent = () => {
 
         <Link
           href='/work'
-          // className={path === '/work' ? 'selectedRoute' : 'notSelectedRoute'}
+          className={path === '/work' ? 'selectedRoute' : 'notSelectedRoute'}
           onClick={() => {
-            // setPath('/work');
+            setPath('/work');
             setIcon(true);
           }}>
           <div>
@@ -85,9 +86,9 @@ const SideBarContent = () => {
 
         <Link
           href='/projects'
-          // className={
-          //   path === '/projects' ? 'selectedRoute' : 'notSelectedRoute'
-          // }
+          className={
+            path === '/projects' ? 'selectedRoute' : 'notSelectedRoute'
+          }
           onClick={() => setIcon(true)}>
           <div>
             <MdOutlineWeb size='25' />
@@ -96,7 +97,7 @@ const SideBarContent = () => {
         </Link>
         <Link
           href='/contact'
-          // className={path === '/contact' ? 'selectedRoute' : 'notSelectedRoute'}
+          className={path === '/contact' ? 'selectedRoute' : 'notSelectedRoute'}
           onClick={() => setIcon(true)}>
           <div>
             <AiOutlineMail size='25' />
