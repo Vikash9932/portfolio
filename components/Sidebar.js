@@ -26,7 +26,7 @@ const SideBarContent = () => {
   }, [router]);
 
   return (
-    <div className='sidebar'>
+    <div className={icon ? 'hide sidebar' : 'sidebar'}>
       <div className='sidebar--image'>
         <Image src='/images/me.jpg' alt='Me' width={100} height={100} />
       </div>
@@ -118,10 +118,11 @@ const Sidebar = () => {
       <div className='sidebar--logo' onClick={() => setIcon(!icon)}>
         {icon && <GiHamburgerMenu color='lightGreen' size='35' />}
       </div>
-      {!icon && <SideBarContent />}
-      <div className='show'>
-        <SideBarContent />
-      </div>
+      {/* {!icon && <SideBarContent />} */}
+      {/* <div className='show'> */}
+      {/* <div className={icon ? 'hide' : 'show'}> */}
+      <SideBarContent />
+      {/* </div> */}
     </>
   );
 };
